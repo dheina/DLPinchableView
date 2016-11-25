@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DLParentPinchableView.h"
 
-@interface DLPinchableView : UIView
+@interface DLPinchableView : UIImageView
+
+@property(nonatomic, readonly, strong) DLParentPinchableView *parentView;
 
 @end

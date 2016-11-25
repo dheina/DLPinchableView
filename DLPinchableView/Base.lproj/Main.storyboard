@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTH-bt-PYK">
+                                <rect key="frame" x="0.0" y="20" width="600" height="360"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTP-HR-pCp">
+                                <rect key="frame" x="0.0" y="380" width="600" height="220"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImgCat1" translatesAutoresizingMaskIntoConstraints="NO" id="gUN-2b-Aob" customClass="DLPinchableView">
+                                        <rect key="frame" x="208.5" y="55" width="183" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gUN-2b-Aob" secondAttribute="height" multiplier="5:3" id="jJA-C9-aPE"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gUN-2b-Aob" firstAttribute="centerY" secondItem="TTP-HR-pCp" secondAttribute="centerY" id="1bl-bO-n0i"/>
+                                    <constraint firstItem="gUN-2b-Aob" firstAttribute="height" secondItem="TTP-HR-pCp" secondAttribute="height" multiplier="0.5" id="MkV-p1-RPy"/>
+                                    <constraint firstItem="gUN-2b-Aob" firstAttribute="centerX" secondItem="TTP-HR-pCp" secondAttribute="centerX" id="gFs-So-5yN"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inside ScrollVIew" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWo-t4-OMx">
+                                <rect key="frame" x="0.0" y="40" width="600" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inside View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEg-lG-I0i">
+                                <rect key="frame" x="0.0" y="559" width="600" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JEg-lG-I0i" secondAttribute="bottom" constant="20" id="4DQ-fc-7RJ"/>
+                            <constraint firstItem="lTH-bt-PYK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Rb-6X-PZU"/>
+                            <constraint firstItem="lTH-bt-PYK" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="BLB-aH-hiU"/>
+                            <constraint firstItem="lTH-bt-PYK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Dgt-MS-AZA"/>
+                            <constraint firstItem="lTH-bt-PYK" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="LHo-hX-tbK"/>
+                            <constraint firstItem="wWo-t4-OMx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="T6E-u4-3Q2"/>
+                            <constraint firstItem="JEg-lG-I0i" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="bLl-2g-2pg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TTP-HR-pCp" secondAttribute="bottom" id="bQ4-kT-IrH"/>
+                            <constraint firstItem="TTP-HR-pCp" firstAttribute="top" secondItem="lTH-bt-PYK" secondAttribute="bottom" id="bsC-da-S9Y"/>
+                            <constraint firstItem="JEg-lG-I0i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d6J-dQ-oDg"/>
+                            <constraint firstItem="wWo-t4-OMx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pe1-ru-DZQ"/>
+                            <constraint firstItem="TTP-HR-pCp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="qzm-0O-Q1X"/>
+                            <constraint firstItem="TTP-HR-pCp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w3q-K2-stw"/>
+                            <constraint firstItem="wWo-t4-OMx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="yq4-Pq-F3n"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="lTH-bt-PYK" id="pdD-4d-Ghk"/>
+                        <outlet property="viewCat" destination="Nlz-5R-Hlg" id="pRy-Hs-QNO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Nlz-5R-Hlg">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="900"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImgCat1" translatesAutoresizingMaskIntoConstraints="NO" id="VbL-Pm-4mZ" customClass="DLPinchableView">
+                            <rect key="frame" x="75" y="250" width="150" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="VbL-Pm-4mZ" secondAttribute="height" multiplier="15:8" id="S15-Pk-wMX"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="VbL-Pm-4mZ" firstAttribute="width" secondItem="Nlz-5R-Hlg" secondAttribute="width" multiplier="0.5" id="dOz-NR-rr0"/>
+                        <constraint firstItem="VbL-Pm-4mZ" firstAttribute="top" secondItem="Nlz-5R-Hlg" secondAttribute="top" constant="250" id="rFb-ZV-Ykp"/>
+                        <constraint firstItem="VbL-Pm-4mZ" firstAttribute="centerX" secondItem="Nlz-5R-Hlg" secondAttribute="centerX" id="uo4-dk-ryH"/>
+                    </constraints>
+                </view>
             </objects>
+            <point key="canvasLocation" x="139" y="136"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ImgCat1" width="270" height="162"/>
+    </resources>
 </document>

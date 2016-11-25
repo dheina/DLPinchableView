@@ -13,6 +13,8 @@
 		27BE8DE71DE707D900346DB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BE8DE51DE707D900346DB2 /* Main.storyboard */; };
 		27BE8DE91DE707D900346DB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BE8DE81DE707D900346DB2 /* Assets.xcassets */; };
 		27BE8DEC1DE707D900346DB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BE8DEA1DE707D900346DB2 /* LaunchScreen.storyboard */; };
+		27BE8DF61DE707F900346DB2 /* DLPinchableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BE8DF51DE707F900346DB2 /* DLPinchableView.m */; };
+		27F08C671DE7C7AB00117FB8 /* DLParentPinchableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F08C661DE7C7AB00117FB8 /* DLParentPinchableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		27BE8DE81DE707D900346DB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27BE8DEB1DE707D900346DB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27BE8DED1DE707D900346DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27BE8DF41DE707F900346DB2 /* DLPinchableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLPinchableView.h; path = DLPinchableView/DLPinchableView.h; sourceTree = "<group>"; };
+		27BE8DF51DE707F900346DB2 /* DLPinchableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLPinchableView.m; path = DLPinchableView/DLPinchableView.m; sourceTree = "<group>"; };
+		27F08C651DE7C7AB00117FB8 /* DLParentPinchableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLParentPinchableView.h; path = DLPinchableView/DLParentPinchableView.h; sourceTree = "<group>"; };
+		27F08C661DE7C7AB00117FB8 /* DLParentPinchableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLParentPinchableView.m; path = DLPinchableView/DLParentPinchableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		27BE8DDB1DE707D900346DB2 /* DLPinchableView */ = {
 			isa = PBXGroup;
 			children = (
+				27BE8DF31DE707EA00346DB2 /* DLPinchableView */,
 				27BE8DDF1DE707D900346DB2 /* AppDelegate.h */,
 				27BE8DE01DE707D900346DB2 /* AppDelegate.m */,
 				27BE8DE21DE707D900346DB2 /* ViewController.h */,
@@ -77,6 +84,17 @@
 				27BE8DDD1DE707D900346DB2 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27BE8DF31DE707EA00346DB2 /* DLPinchableView */ = {
+			isa = PBXGroup;
+			children = (
+				27BE8DF41DE707F900346DB2 /* DLPinchableView.h */,
+				27BE8DF51DE707F900346DB2 /* DLPinchableView.m */,
+				27F08C651DE7C7AB00117FB8 /* DLParentPinchableView.h */,
+				27F08C661DE7C7AB00117FB8 /* DLParentPinchableView.m */,
+			);
+			name = DLPinchableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +168,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				27BE8DE41DE707D900346DB2 /* ViewController.m in Sources */,
+				27BE8DF61DE707F900346DB2 /* DLPinchableView.m in Sources */,
 				27BE8DE11DE707D900346DB2 /* AppDelegate.m in Sources */,
 				27BE8DDE1DE707D900346DB2 /* main.m in Sources */,
+				27F08C671DE7C7AB00117FB8 /* DLParentPinchableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +320,7 @@
 				27BE8DF21DE707D900346DB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -11,5 +11,8 @@
 @interface ViewController : UIViewController
 
 
+@property(nonatomic, weak) IBOutlet UIScrollView *scrollView;
+@property(nonatomic, weak) IBOutlet UIView *viewCat;
+
 @end
 
