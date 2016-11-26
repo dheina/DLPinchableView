@@ -24,6 +24,7 @@ DLParentPinchableViewDelegate
     self = [super initWithFrame:frame];
     if (self) {
         [self initialization];
+        [UIImage imageNamed:@"ImgCat1"];
     }
     return self;
 }
