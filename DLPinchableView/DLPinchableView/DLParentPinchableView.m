@@ -106,7 +106,11 @@ float originalScale = 1;
 {
     self.scaleTemp = recognizer.scale;
     self.cloneView.transform = CGAffineTransformScale(self.cloneView.transform, recognizer.scale, recognizer.scale);
-    self.backgroundView.alpha = (self.cloneView.transform.a+(MAX(self.cloneView.transform.b, self.cloneView.transform.c)))-1;
+    float backgroundAlpha = (self.cloneView.transform.a+(MAX(self.cloneView.transform.b, self.cloneView.transform.c)))-1;
+    if(self.cloneView.transform.a<=0){
+        backgroundAlpha = ((self.cloneView.transform.a)-1)*-1;
+    }
+    self.backgroundView.alpha = backgroundAlpha;
     recognizer.scale = 1;
 }
 
