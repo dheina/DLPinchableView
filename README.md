@@ -18,9 +18,9 @@ Supported OS : 7.0
 ##### Programmatically
 1. Add this code for init
 ```
-DLPinchableView *categoryView = [[DLPinchableView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
-categoryView.image = [UIImage imageNamed:@"ImgCat1"];
-[self.view addSubview:categoryView];
+DLPinchableView *pinchV = [[DLPinchableView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
+pinchV.image = [UIImage imageNamed:@"ImgCat1"];
+[self.view addSubview:pinchV];
 ```
 
 
