@@ -77,10 +77,10 @@ float originalScale = 1;
         [self.delegate DLParentPinchableView:self onDissmisedFinish:NO];
     }
     [UIView animateWithDuration:0.2f animations:^{
-                self.cloneView.center = CGPointMake(self.originFrame.origin.x+(self.originFrame.size.width/2),self.originFrame.origin.y+(self.originFrame.size.height/2));
-                self.cloneView.transform = CGAffineTransformMakeScale(1, 1);
-                self.cloneView.transform = CGAffineTransformMakeRotation(0);
-                self.alpha = 1;
+        self.cloneView.center = CGPointMake(self.originFrame.origin.x+(self.originFrame.size.width/2),self.originFrame.origin.y+(self.originFrame.size.height/2));
+        self.cloneView.transform = CGAffineTransformMakeScale(1, 1);
+        self.cloneView.transform = CGAffineTransformMakeRotation(0);
+        self.alpha = 1;
     } completion:^(BOOL finished) {
         if(finished){
             if(self.delegate && [self.delegate respondsToSelector:@selector(DLParentPinchableView:onDissmisedFinish:)]){
@@ -95,9 +95,9 @@ float originalScale = 1;
 - (void)handlePanA:(UIPanGestureRecognizer *)recognizer {
     CGPoint translation = [recognizer translationInView:self.cloneView.superview];
     self.cloneView.center = CGPointMake(self.cloneView.center.x + translation.x,
-                                         self.cloneView.center.y + translation.y);
+                                        self.cloneView.center.y + translation.y);
     [recognizer setTranslation:CGPointMake(0, 0) inView:self.cloneView.superview];
-    if (recognizer.state == UIGestureRecognizerStateEnded) {
+    if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled) {
         [self dismiss];
     }
 }
