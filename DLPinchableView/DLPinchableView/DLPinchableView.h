@@ -13,6 +13,8 @@
 
 @protocol DLPinchableViewDelegate <NSObject>
 @optional
+
+-(void)DLPinchableViewOnTapped:(DLPinchableView*)view;
 -(void)DLPinchableViewOnPinchStart:(DLPinchableView*)view;
 -(void)DLPinchableViewOnPinchDone:(DLPinchableView*)view;
 

@@ -51,6 +51,16 @@ DLParentPinchableViewDelegate
     panGesture.delegate = self;
     [self addGestureRecognizer:panGesture];
     
+    
+    UIGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap:)];
+    tapGesture.delegate = self;
+    [self addGestureRecognizer:tapGesture];
+}
+
+- (IBAction)handleTap:(UIPanGestureRecognizer *)recognizer {
+    if(self.delegate != nil && [self.delegate respondsToSelector:@selector(DLPinchableViewOnTapped:)]){
+        [self.delegate DLPinchableViewOnTapped:self];
+    }
 }
 
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
@@ -71,14 +81,13 @@ DLParentPinchableViewDelegate
     return YES;
 }
 
-
 -(void)duplicateCurrentView
 {
     if (!parentView) {
         parentView = [[DLParentPinchableView alloc] initWithView:self];
         parentView.delegate = self;
         [self setParent:self.superview userInteraction:NO];
-        if(self.delegate){
+        if(self.delegate != nil && [self.delegate respondsToSelector:@selector(DLPinchableViewOnPinchStart:)]){
             [self.delegate DLPinchableViewOnPinchStart:self];
         }
     }
@@ -95,7 +104,7 @@ DLParentPinchableViewDelegate
         parentView = nil;
     }
     [self setParent:self.superview userInteraction:YES];
-    if(self.delegate){
+    if(self.delegate !=nil && [self.delegate respondsToSelector:@selector(DLPinchableViewOnPinchDone:)]){
         [self.delegate DLPinchableViewOnPinchDone:self];
     }
 }
