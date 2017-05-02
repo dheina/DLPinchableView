@@ -52,6 +52,7 @@ float originalScale = 1;
     self.originFrame = CGRectMake(pointInScreen.x, pointInScreen.y, src.frame.size.width, src.frame.size.height);
     self.cloneView = [[UIImageView alloc]initWithFrame:self.originFrame];
     self.cloneView.image = src.image;
+    self.cloneView.contentMode = src.contentMode;
     self.cloneView.userInteractionEnabled = YES;
     
     [self.cloneView becomeFirstResponder];
